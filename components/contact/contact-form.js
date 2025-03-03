@@ -11,7 +11,7 @@ function ContactForm() {
 
     // optional: add client-side validation
 
-    // ✅ 여기까지 했을 때, pages/posts/contact.js 파일에서 쓴 console.log(newMessage)에 의해 vscode 터미널에서 내가 입력한 데이터가 보여야 한다.
+    // ✅ 여기까지 했을 때, pages/api/contact.js 파일에서 쓴 console.log(newMessage)에 의해 vscode 터미널에서 내가 입력한 데이터가 보여야 한다.
     await fetch("/api/contact", {
       method: "POST",
       body: JSON.stringify({
