@@ -1,5 +1,5 @@
 import Link from "next/link";
-import classes from "./posts-item.module.css";
+import classes from "./post-item.module.css";
 import Image from "next/image";
 
 function PostItem(props) {
@@ -20,12 +20,19 @@ function PostItem(props) {
   // 예를 들어, 'slug'가 'my-post'이고 이미지 파일명이 'post-image.jpg'라면,
   // imagePath는 '/images/posts/my-post/post-image.jpg'로 설정됩니다.
   const imagePath = `/images/posts/${slug}/${image}`;
+  const linkPath = `/posts/${slug}`;
 
   return (
     <li className={classes.post}>
-      <Link href="">
+      <Link href={linkPath}>
         <div className={classes.image}>
-          <Image src={imagePath} alt={title} widht={300} height={200} />
+          <Image
+            src={imagePath}
+            alt={title}
+            width={300}
+            height={200}
+            layout="responsive"
+          />
         </div>
         <div className={classes.content}>
           <h3>{title}</h3>
